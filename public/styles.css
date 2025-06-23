@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+header {
+  font-size: 25px;
+  line-height: 70px;
+  height: 70px;
+  padding-left: 15px;
+  background-color: coral;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-bar h2 {
+  font-size: 25px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.side-bar {
+  display: inline-block;
+  padding: 20px;
+  width: 30%;
+  height: 100%;
+  background-color: bisque;
+  overflow: scroll;
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+}
+
+.posts-list {
+  /* height: 200px; */
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+.post {
+  height: 80px;
+  padding: 10px;
+  padding-right: 15px;
+  border-radius: 10px;
+  width: 95%;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.post-options {
+  height: 100%;
+  /* font-size: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+i:hover {
+  color: white;
+}
+
+.post-options i {
+  visibility: hidden;
+}
+.post:hover {
+  .post-options i {
+    visibility: visible;
+  }
+
+  .post-options i:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.blog-form {
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  background-color: cadetblue;
+  padding: 20px 40px;
+}
+.blog-form p {
+  text-align: right;
+  font-size: 20px;
+}
+.blog-form h2 {
+  font-size: 25px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.blog-form label {
+  margin-bottom: 5px;
+  font-size: 20px;
+  display: block;
+}
+.blog-form input,
+textarea {
+  outline: 3px solid black;
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+}
+.blog-form textarea {
+  height: 100px;
+  padding-top: 10px;
+}
+.blog-form button {
+  border: 3px solid black;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: chocolate;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

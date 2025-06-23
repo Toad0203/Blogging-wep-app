@@ -1,0 +1,16 @@
+<div class="blog-form">
+  <h2>Update post</h2>
+  <form action="/update/<%= editPost.id %>" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="<%= editPost.title %>" />
+    <label for="description">Description</label>
+    <textarea name="description" id="description">
+<%= editPost.description %></textarea
+    >
+    <label for="content">Content</label>
+    <textarea name="content" id="content" style="height: 200px">
+<%= editPost.blog_content %></textarea
+    >
+    <button type="submit">UPDATE</button>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+# Ignore environment variables
+.env
+
+# Ignore node_modules (you never push this)
+node_modules/
+
+# Ignore system files
+.DS_Store
+
+# Logs and output
+npm-debug.log*

@@ -1,0 +1,46 @@
+<%- include("./partials/header.ejs"); %>
+
+<main>
+  <div class="side-bar">
+    <h2>Recent posts</h2>
+    <div class="posts-list">
+      <% if(posts && posts.length>0) { %> <% posts.forEach((post) => { %>
+      <a href="/view/<%= post.id %>">
+        <div class="post">
+          <div class="post-text">
+            <h3><%= post.title %></h3>
+            <p><%= post.blog_date %>, <%= post.blog_time %></p>
+          </div>
+          <div class="post-options">
+            <a href="/edit/<%= post.id %>"
+              ><i class="fa-solid fa-pencil"></i
+            ></a>
+            <a href="/delete/<%= post.id %>"
+              ><i class="fa-solid fa-trash"></i
+            ></a>
+          </div>
+        </div>
+      </a>
+      <% }) %> <% } %>
+      <div
+        class="post"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 50px;
+          background-color: cadetblue;
+        "
+      >
+        <a href="/"><i class="fa-solid fa-plus"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <% if (typeof viewPost !== 'undefined') { %> <%-
+  include("./partials/view-post.ejs") %> <% } else if (typeof editPost !==
+  'undefined') { %> <%- include("./partials/edit-form.ejs") %> <% } else { %>
+  <%- include("./partials/blog-form.ejs") %> <% } %>
+</main>
+
+<%- include("./partials/footer.ejs"); %>
